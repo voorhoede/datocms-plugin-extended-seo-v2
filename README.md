@@ -1,8 +1,4 @@
-# [Your plugin name]
-
-[Describe what your plugin does, and how users you can configure it! Screenshots are always welcome!]
-
-# DatoCMS-plugin: Extended SEO
+# DatoCMS-plugin: Extended SEO v2
 ![image](https://user-images.githubusercontent.com/83574823/165094566-83854280-dc38-4741-bd0c-5d25914f6dbd.png)
 
 ## About this repo :scroll:
@@ -28,14 +24,26 @@ This plugin extends the DatoCMS SEO meta field. This plugin allows users to see 
 * Edit SEO fields and save it directly as SEO data.
 * Using the Voorhoede Heads Up
 
+![extended seo plugin](./readme_images/pluginscreenshot_img.png)
+
+
 #### Editor can edit fields
 To edit the SEO-settings, the user can click on the configure button to open a modal with all the editable SEO-fields.
+
+![extended seo plugin](./readme_images/edittitle_img.png)
+
 
 #### Upload an image
 The user can also upload an image that will be shown in the cards.
 
+![extended seo plugin](./readme_images/addimg_img.png)
+
+
 #### Remove/reset settings
 The user can click on the reset button to remove all data from the editable SEO-settings. The user can also remove an uploaded image by opening the SEO-settings modal and hover over the image uploader. A button will appear, and once pressed, the uploaded image will be removed.
+
+![extended seo plugin](./readme_images/removereplace_img.png)
+
 
 
 ## Installation on DatoCMS
@@ -87,7 +95,7 @@ https://datocms-plugin-titan-auction.netlify.app/
 Make sure you enter the correct Field ID in the plugin model. You can do this by navigating to your models settings, edit the model settings and fill in your correct Field ID.
 Also don't forget to fill in the name of your plugin in the field editor under the heading "Presentation": 
 
-![Image carousel](./readme_images/editfield_img.png)
+![correct field id settings](./readme_images/editfield_img.png)
 
 ## About DatoCMS :cloud:
 DatoCMS is a cloudbased headless CMS designed to work with static websites, mobile apps and server-side applications of any kind.
