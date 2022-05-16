@@ -87,7 +87,7 @@ https://datocms-plugin-titan-auction.netlify.app/
 Make sure you enter the correct Field ID in the plugin model. You can do this by navigating to your models settings, edit the model settings and fill in your correct Field ID.
 Also don't forget to fill in the name of your plugin in the field editor under the heading "Presentation": 
 
-![Model settings screenshot inputfield](./readme_images/readme_img6.png)
+![Image carousel](./readme_images/editfield_img.png)
 
 ## About DatoCMS :cloud:
 DatoCMS is a cloudbased headless CMS designed to work with static websites, mobile apps and server-side applications of any kind.
