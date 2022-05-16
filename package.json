@@ -5,11 +5,11 @@
   "dependencies": {
     "@types/node": "^16.11.33",
     "@types/react": "^17.0.44",
-    "@types/react-dom": "^17.0.16",
     "datocms-plugin-sdk": "^0.5.2",
     "datocms-react-ui": "^0.5.2",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-icons": "^4.3.1",
     "react-scripts": "5.0.1",
     "typescript": "^4.6.4"
   },
@@ -38,7 +38,9 @@
     ]
   },
   "devDependencies": {
-    "cross-env": "^7.0.3"
+    "@types/react-dom": "^18.0.4",
+    "cross-env": "^7.0.3",
+    "datocms-client": "^3.5.20"
   },
   "datoCmsPlugin": {
     "title": "",
