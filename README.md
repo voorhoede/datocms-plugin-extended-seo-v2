@@ -24,25 +24,25 @@ This plugin extends the DatoCMS SEO meta field. This plugin allows users to see 
 * Edit SEO fields and save it directly as SEO data.
 * Using the Voorhoede Heads Up
 
-![extended seo plugin](./readme_images/pluginscreenshot_img.png)
+![extended seo plugin](./readme_images/seoplugin_img.png)
 
 
 #### Editor can edit fields
 To edit the SEO-settings, the user can click on the configure button to open a modal with all the editable SEO-fields.
 
-![extended seo plugin](./readme_images/edittitle_img.png)
+![edit fields](./readme_images/edittitle_img.png)
 
 
 #### Upload an image
 The user can also upload an image that will be shown in the cards.
 
-![extended seo plugin](./readme_images/addimg_img.png)
+![upload image section](./readme_images/addimg_img.png)
 
 
 #### Remove/reset settings
 The user can click on the reset button to remove all data from the editable SEO-settings. The user can also remove an uploaded image by opening the SEO-settings modal and hover over the image uploader. A button will appear, and once pressed, the uploaded image will be removed.
 
-![extended seo plugin](./readme_images/removereplace_img.png)
+![remove or replace button](./readme_images/removereplace_img.png)
 
 
 
