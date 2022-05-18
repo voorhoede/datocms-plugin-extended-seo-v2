@@ -20,7 +20,6 @@
     background-color: #fffc;
     color: #848484;
     font-size: .9em;
-    font-family: var(--main-font);
     border:none;
     cursor: pointer;
     border-radius: .5em .5em 0 0 ;
@@ -41,7 +40,6 @@
     color: var(--dark-color);
     background-color: #fff;
     color: #34363a;
-    font-family: var(--main-font);
     border:none;
     cursor: pointer;
 

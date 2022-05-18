@@ -1,6 +1,3 @@
-:root {
-    --main-font:'Roboto', sans-serif;
-  }
 
 .tabs {
     border: 1px solid #f0f0f0;
@@ -26,7 +23,6 @@
     font-weight: 700;
     color: rgb(167, 75, 179);
     transition: .3s ease;
-    font-family: var(--main-font);
     font-size: 1em;
   }
 
@@ -64,7 +60,6 @@
     font-weight: 700;
     color: #fff;
     transition: .3s ease;
-    font-family: var(--main-font);
     font-size: 1em;
     background-color: #ff5e49;
     border-radius: .3em;
