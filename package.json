@@ -1,7 +1,24 @@
 {
-  "name": "datocms-plugin-extended-seo",
+  "name": "datocms-plugin-extended-seo-v2",
   "version": "0.1.0",
-  "private": true,
+  "homepage": "https://github.com/voorhoede/datocms-plugin-extended-seo-v2",
+  "description": "Extends SEO meta field",
+  "keywords": ["datocms", "datocms-plugin", "extended-seo", "seo-plugin", "seo-field"],
+  "files": [
+    "build",
+    "readme_images"
+  ],
+  "author": "Voorhoede <claudio@voorhoede.nl>",
+  "license": "MIT",
+  "datoCmsPlugin": {
+    "title": "Computed Fields",
+    "previewImage": "readme_images/seoplugin_img.png",
+    "coverImage": "",
+    "entryPoint": "build/index.html",
+    "permissions": [
+      "currentUserAccessToken"
+    ]
+  },
   "dependencies": {
     "@types/node": "^16.11.33",
     "@types/react": "^17.0.44",
@@ -41,11 +58,5 @@
     "@types/react-dom": "^18.0.4",
     "cross-env": "^7.0.3",
     "datocms-client": "^3.5.20"
-  },
-  "datoCmsPlugin": {
-    "title": "",
-    "previewImage": "",
-    "coverImage": "",
-    "entryPoint": "build/index.html"
   }
 }
