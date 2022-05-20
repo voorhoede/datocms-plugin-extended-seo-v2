@@ -1,9 +1,15 @@
 {
   "name": "datocms-plugin-extended-seo-v2",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/voorhoede/datocms-plugin-extended-seo-v2",
   "description": "Extends SEO meta field",
-  "keywords": ["datocms", "datocms-plugin", "extended-seo", "seo-plugin", "seo-field"],
+  "keywords": [
+    "datocms",
+    "datocms-plugin",
+    "extended-seo",
+    "seo-plugin",
+    "seo-field"
+  ],
   "files": [
     "build",
     "readme_images"
