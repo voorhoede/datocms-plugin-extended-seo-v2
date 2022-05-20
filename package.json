@@ -11,7 +11,7 @@
   "author": "Voorhoede <claudio@voorhoede.nl>",
   "license": "MIT",
   "datoCmsPlugin": {
-    "title": "Computed Fields",
+    "title": "Extended SEO v2",
     "previewImage": "readme_images/seoplugin_img.png",
     "coverImage": "",
     "entryPoint": "build/index.html",

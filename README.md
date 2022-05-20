@@ -24,25 +24,25 @@ This plugin extends the DatoCMS SEO meta field. This plugin allows users to see 
 * Edit SEO fields and save it directly as SEO data.
 * Using the Voorhoede Heads Up
 
-![extended seo plugin](./readme_images/seoplugin_img.png)
+![extended seo plugin](https://github.com/voorhoede/datocms-plugin-extended-seo-v2/blob/main/readme_images/seoplugin_img.png)
 
 
 #### Editor can edit fields
 To edit the SEO-settings, the user can click on the configure button to open a modal with all the editable SEO-fields.
 
-![edit fields](./readme_images/edittitle_img.png)
+![edit fields](https://github.com/voorhoede/datocms-plugin-extended-seo-v2/blob/main/readme_images/edittitle_img.png)
 
 
 #### Upload an image
 The user can also upload an image that will be shown in the cards.
 
-![upload image section](./readme_images/addimg_img.png)
+![upload image section](https://github.com/voorhoede/datocms-plugin-extended-seo-v2/blob/main/readme_images/addimg_img.png)
 
 
 #### Remove/reset settings
 The user can click on the reset button to remove all data from the editable SEO-settings. The user can also remove an uploaded image by opening the SEO-settings modal and hover over the image uploader. A button will appear, and once pressed, the uploaded image will be removed.
 
-![remove or replace button](./readme_images/removereplace_img.png)
+![remove or replace button](https://github.com/voorhoede/datocms-plugin-extended-seo-v2/blob/main/readme_images/removereplace_img.png)
 
 
 
@@ -70,7 +70,7 @@ npm install
 ```
 
 ### Starting the application :collision:
-Now that all the node modules are installed, you can start the application by entering the following command in your terminal: 
+Now that all the node modules are installed, you can start the application by entering the following command in your terminal:
 
 ```bash
 npm start
@@ -93,9 +93,9 @@ https://datocms-plugin-titan-auction.netlify.app/
 ```
 
 Make sure you enter the correct Field ID in the plugin model. You can do this by navigating to your models settings, edit the model settings and fill in your correct Field ID.
-Also don't forget to fill in the name of your plugin in the field editor under the heading "Presentation": 
+Also don't forget to fill in the name of your plugin in the field editor under the heading "Presentation":
 
-![correct field id settings](./readme_images/editfield_img.png)
+![correct field id settings](https://github.com/voorhoede/datocms-plugin-extended-seo-v2/blob/main/readme_images/editfield_img.png)
 
 ## About DatoCMS :cloud:
 DatoCMS is a cloudbased headless CMS designed to work with static websites, mobile apps and server-side applications of any kind.
