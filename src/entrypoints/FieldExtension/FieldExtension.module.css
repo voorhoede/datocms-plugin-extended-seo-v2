@@ -1,0 +1,10 @@
+.fieldset {
+  padding: var(--spacing-l);
+  text-align: center;
+  border: 1px solid var(--border-color);
+  box-sizing: border-box;
+}
+
+.button {
+  margin-top: var(--spacing-s);
+}

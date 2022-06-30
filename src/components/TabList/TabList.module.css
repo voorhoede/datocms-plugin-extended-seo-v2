@@ -1,0 +1,32 @@
+.tabs {
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: var(--light-bg-color);
+}
+
+.list {
+  display: flex;
+  align-items: flex-end;
+  background-color: var(--light-bg-color);
+  line-height: 1;
+}
+
+.content {
+  padding: var(--spacing-m);
+  background-color: #fff;
+}
+
+.configure {
+  margin-left: auto;
+  align-self: center;
+  line-height: initial;
+}
+
+.resetButton {
+  margin: 0 var(--spacing-s);
+}
+
+.resetButton svg {
+  fill: #fff;
+}
