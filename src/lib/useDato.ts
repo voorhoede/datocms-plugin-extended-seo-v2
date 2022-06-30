@@ -1,8 +1,8 @@
-import { SiteClient } from 'datocms-client';
+const { SiteClient } = require('datocms-client')
 
-export default function useData(datoApiToken) {
+export default function useData(datoApiToken: string) {
   const datoClient = new SiteClient(datoApiToken)
-  async function getImageUrl(uploadId) {
+  async function getImageUrl(uploadId: string) {
     if (!uploadId) {
       return undefined
     }

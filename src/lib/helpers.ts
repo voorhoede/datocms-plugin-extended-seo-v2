@@ -1,6 +1,8 @@
+import { Socials } from './types';
+
 let config = { title: '', description: '', image: '' }
 
-export function buildPreviewURL(social, options = {}) {
+export function buildPreviewURL(social: Socials, options = {}) {
   config = Object.assign(config, options)
   const baseUrl = 'https://heads-up-devtools.netlify.app'
   const params = new URLSearchParams()
