@@ -57,7 +57,6 @@ export default function FieldExtension({ ctx }: Props) {
 
   useEffect(() => {
     fetchImage()
-    console.log(imageId)
     // eslint-disable-next-line
   }, [])
 
