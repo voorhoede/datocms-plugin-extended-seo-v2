@@ -17,9 +17,10 @@ type Props = {
 }
 
 export default function FieldExtension({ ctx }: Props) {
+  const { currentUserAccessToken, environment } = ctx
   const fieldValue: any = get(ctx.formValues, ctx.fieldPath)
   const imageId = fieldValue?.image || ''
-  const { getImageUrl } = useDato(ctx.currentUserAccessToken as string)
+  const { getImageUrl } = useDato(currentUserAccessToken || '', environment)
   const [socialImageUrl, setSocialImageUrl] = useState('')
 
   async function handleOpenModal() {
@@ -56,6 +57,7 @@ export default function FieldExtension({ ctx }: Props) {
 
   useEffect(() => {
     fetchImage()
+    console.log(imageId)
     // eslint-disable-next-line
   }, [])
 
