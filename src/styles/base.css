@@ -1,0 +1,10 @@
+iframe {
+  width: 100%;
+}
+
+button {
+  font: inherit;
+  font-size: var(--font-size-m);
+  border: none;
+  cursor: pointer;
+}
