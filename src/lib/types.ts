@@ -26,4 +26,5 @@ export enum Socials {
   twitter = 'twitter',
   whatsapp = 'whatsapp',
   slack = 'slack',
+  google = 'google-default'
 }
