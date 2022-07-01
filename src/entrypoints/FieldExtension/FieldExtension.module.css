@@ -8,3 +8,8 @@
 .button {
   margin-top: var(--spacing-s);
 }
+
+.iframe {
+  width: 100%;
+  height: 175px;
+}

@@ -46,6 +46,7 @@ export default function FieldExtension({ ctx }: Props) {
 
   function resetData() {
     ctx.setFieldValue(ctx.fieldPath, null)
+    setSocialImageUrl('')
   }
 
   async function fetchImage() {
@@ -63,12 +64,13 @@ export default function FieldExtension({ ctx }: Props) {
   const SocialTabs = Object.entries(socials).map(([title, slug]) => (
     <div key={title}>
       <iframe
-        className="social-preview-card"
+        className={styles.iframe}
         title={title}
         src={buildPreviewURL(slug, {
           title: fieldValue?.title,
           description: fieldValue?.description,
           image: socialImageUrl,
+          card: fieldValue?.twitter_card,
         })}
       />
     </div>
