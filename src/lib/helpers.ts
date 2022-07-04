@@ -1,7 +1,7 @@
 import { Socials } from './types';
-import { headsUpUrl } from './constants';
+import { headsUpUrl, defaultUrl } from './constants';
 
-let config = { title: '', description: '', image: '', url: 'https://example.com/', card: '' }
+let config = { title: '', description: '', image: '', url: '', card: '' }
 
 export function buildPreviewURL(social: Socials, options = {}) {
   config = Object.assign(config, options)
@@ -10,7 +10,7 @@ export function buildPreviewURL(social: Socials, options = {}) {
   params.set('title', config.title || '')
   params.set('description', config.description || '')
   params.set('image', config.image || '')
-  params.set('url', config.url || '')
+  params.set('url', config.url || defaultUrl)
 
   params.set('theme', 'default')
 

@@ -6,7 +6,7 @@ import { FaPen } from 'react-icons/fa'
 
 import TabList from '../../components/TabList/TabList'
 
-import { socials } from '../../lib/constants'
+import { socials, defaultUrl } from '../../lib/constants'
 import { buildPreviewURL } from '../../lib/helpers'
 import useDato from '../../lib/useDato'
 
@@ -18,10 +18,25 @@ type Props = {
 
 export default function FieldExtension({ ctx }: Props) {
   const { currentUserAccessToken, environment } = ctx
+  const locale: string = ctx.locale
   const fieldValue: any = get(ctx.formValues, ctx.fieldPath)
   const imageId = fieldValue?.image || ''
   const { getImageUrl } = useDato(currentUserAccessToken || '', environment)
   const [socialImageUrl, setSocialImageUrl] = useState('')
+
+  const slugField = Object.values(ctx.fields).find((value) => {
+    return value?.attributes.field_type === 'slug'
+  })
+  const slugFieldPrefix =
+    slugField?.attributes?.appearance?.parameters?.url_prefix
+  const slugFieldId = slugField?.attributes.api_key || ''
+  const slugFieldLocalized: boolean = slugField?.attributes.localized || false
+
+  const slugFieldPath: string = slugFieldLocalized
+    ? `${slugFieldId}.${locale}`
+    : slugFieldId
+
+  const slugFieldData: any = get(ctx.formValues, slugFieldPath)
 
   async function handleOpenModal() {
     return await ctx.openModal({
@@ -71,6 +86,7 @@ export default function FieldExtension({ ctx }: Props) {
           description: fieldValue?.description,
           image: socialImageUrl,
           card: fieldValue?.twitter_card,
+          url: `${slugFieldPrefix || defaultUrl}/${slugFieldData || ''}`
         })}
       />
     </div>

@@ -18,3 +18,4 @@ export const twitterCardOptions: TwitterCardType[] = [
 ]
 
 export const headsUpUrl = 'https://heads-up-web-app.netlify.app'
+export const defaultUrl = 'https://example.com'
