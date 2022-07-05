@@ -1,6 +1,6 @@
 {
   "name": "datocms-plugin-extended-seo-v2",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "homepage": "https://github.com/voorhoede/datocms-plugin-extended-seo-v2",
   "description": "Extends SEO meta field",
   "keywords": [
@@ -12,29 +12,18 @@
   ],
   "files": [
     "build",
-    "readme_images"
+    "docs"
   ],
-  "author": "Voorhoede <claudio@voorhoede.nl>",
+  "author": "Voorhoede",
   "license": "MIT",
   "datoCmsPlugin": {
     "title": "Extended SEO v2",
     "previewImage": "readme_images/seoplugin_img.png",
-    "coverImage": "",
+    "coverImage": "docs/cover.png",
     "entryPoint": "build/index.html",
     "permissions": [
       "currentUserAccessToken"
     ]
-  },
-  "dependencies": {
-    "@types/node": "^16.11.33",
-    "@types/react": "^17.0.44",
-    "datocms-plugin-sdk": "^0.5.2",
-    "datocms-react-ui": "^0.5.2",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "react-icons": "^4.3.1",
-    "react-scripts": "5.0.1",
-    "typescript": "^4.6.4"
   },
   "scripts": {
     "start": "cross-env BROWSER='none' PUBLIC_URL='/' react-scripts start",
@@ -61,8 +50,20 @@
     ]
   },
   "devDependencies": {
-    "@types/react-dom": "^18.0.4",
     "cross-env": "^7.0.3",
     "datocms-client": "^3.5.20"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.178",
+    "@types/node": "^16.11.33",
+    "@types/react": "^17.0.44",
+    "@types/react-dom": "^18.0.4",
+    "datocms-plugin-sdk": "^0.5.2",
+    "datocms-react-ui": "^0.5.2",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-icons": "^4.3.1",
+    "react-scripts": "^5.0.1",
+    "typescript": "^4.5.2"
   }
 }
