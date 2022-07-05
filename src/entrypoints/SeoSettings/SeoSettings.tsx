@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import {
   Canvas,
   Form,
@@ -20,6 +20,7 @@ type Props = {
 
 export default function SeoSettings({ ctx }: Props) {
   const fieldValuesParameters = ctx.parameters.fieldValue as FieldValues
+  const validators: any = ctx.parameters.validators
 
   const [titleInput, setTitleInput] = useState<string>(
     fieldValuesParameters?.title || ''
@@ -39,6 +40,44 @@ export default function SeoSettings({ ctx }: Props) {
   const [imageUrl, setImageUrl] = useState<string | undefined>(
     ctx.parameters?.imageUrl as string
   )
+
+  const titleFieldHint: string | null = useMemo(() => {
+    const max = validators?.title_length?.max
+    const min = validators?.title_length?.min
+
+    if (min && max) {
+      return `Field length must be between ${min} and ${max} characters`
+    }
+
+    if (min) {
+      return `Field must be at least ${min} characters`
+    }
+
+    if (max) {
+      return `Field cannot be more than ${max} characters`
+    }
+
+    return null
+  }, [validators])
+
+  const descriptionFieldHint: string | null = useMemo(() => {
+    const max = validators?.description_length?.max
+    const min = validators?.description_length?.min
+
+    if (min && max) {
+      return `Field length must be between ${min} and ${max} characters`
+    }
+
+    if (min) {
+      return `Field must be at least ${min} characters`
+    }
+
+    if (max) {
+      return `Field cannot be more than ${max} characters`
+    }
+
+    return null
+  }, [validators])
 
   function handleSubmit() {
     const fieldValue = {
@@ -81,7 +120,7 @@ export default function SeoSettings({ ctx }: Props) {
             id="Title"
             label="Title"
             placeholder="Title"
-            hint="Field cannot be more than 60 characters"
+            hint={titleFieldHint}
             onChange={(newValue) => setTitleInput(newValue)}
             value={titleInput}
           />
@@ -91,7 +130,7 @@ export default function SeoSettings({ ctx }: Props) {
             id="Description"
             label="Description"
             placeholder="Description"
-            hint="Field cannot be more than 160 characters"
+            hint={descriptionFieldHint}
             onChange={(newValue) => setDescriptionInput(newValue)}
             value={descriptionInput}
           />
