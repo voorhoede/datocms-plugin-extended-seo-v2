@@ -17,8 +17,12 @@ export function buildPreviewURL(social: Socials, options = {}) {
 
   params.set('theme', 'default')
 
-  if (social === 'slack') {
+  if (social === Socials.slack) {
     params.set('additionalData', JSON.stringify([]))
+  }
+
+  if (social === Socials.facebook && config.image) {
+    params.set('imageSpecified', 'true')
   }
 
   if (config.card) {
