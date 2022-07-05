@@ -18,7 +18,7 @@
   "license": "MIT",
   "datoCmsPlugin": {
     "title": "Extended SEO v2",
-    "previewImage": "readme_images/seoplugin_img.png",
+    "previewImage": "docs/extended-seo-plugin.png",
     "coverImage": "docs/cover.png",
     "entryPoint": "build/index.html",
     "permissions": [

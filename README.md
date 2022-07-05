@@ -23,25 +23,25 @@ This project was build using:
 * Edit SEO fields and save it directly as SEO data.
 * Using the Voorhoede Heads Up
 
-![extended seo plugin](https://github.com/voorhoede/datocms-plugin-extended-seo-v2/blob/main/docs/extended-seo-plugin.png)
+![extended seo plugin](https://github.com/voorhoede/datocms-plugin-extended-seo-v2/raw/main/docs/extended-seo-plugin.png)
 
 
 #### Editor can edit fields
 To edit the SEO-settings, the user can click on the configure button to open a modal with all the editable SEO-fields.
 
-![edit fields](https://github.com/voorhoede/datocms-plugin-extended-seo-v2/blob/main/docs/extended-seo-edit-title.png)
+![edit fields](https://github.com/voorhoede/datocms-plugin-extended-seo-v2/raw/main/docs/extended-seo-edit-title.png)
 
 
 #### Upload an image
 The user can also upload an image that will be shown in the cards.
 
-![upload image section](https://github.com/voorhoede/datocms-plugin-extended-seo-v2/blob/main/docs/extended-seo-add-image.png)
+![upload image section](https://github.com/voorhoede/datocms-plugin-extended-seo-v2/raw/main/docs/extended-seo-add-image.png)
 
 
 #### Remove/reset settings
 The user can click on the reset button to remove all data from the editable SEO-settings. The user can also remove an uploaded image by opening the SEO-settings modal and hover over the image uploader. A button will appear, and once pressed, the uploaded image will be removed.
 
-![remove or replace button](https://github.com/voorhoede/datocms-plugin-extended-seo-v2/blob/main/docs/extended-seo-remove-or-replace.png)
+![remove or replace button](https://github.com/voorhoede/datocms-plugin-extended-seo-v2/raw/main/docs/extended-seo-remove-or-replace.png)
 
 
 
@@ -90,7 +90,7 @@ If you already deployed the plugin, fill in your netlify (or your deployed site 
 Make sure you enter the correct Field ID in the plugin model. You can do this by navigating to your models settings, edit the model settings and fill in your correct Field ID.
 Also don't forget to fill in the name of your plugin in the field editor under the heading "Presentation":
 
-![correct field id settings](https://github.com/voorhoede/datocms-plugin-extended-seo-v2/blob/main/docs/extended-seo-edit-field.png)
+![correct field id settings](https://github.com/voorhoede/datocms-plugin-extended-seo-v2/raw/main/docs/extended-seo-edit-field.png)
 
 ## About DatoCMS :cloud:
 DatoCMS is a cloudbased headless CMS. See [datocms.md](https://github.com/voorhoede/datocms-plugin-extended-seo-v2/blob/main/datocms.md).
