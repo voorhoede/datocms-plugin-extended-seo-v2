@@ -1,7 +1,7 @@
 .fieldset {
   padding: var(--spacing-l);
   text-align: center;
-  border: 1px solid var(--border-color);
+  border: 1px dashed var(--border-color);
   box-sizing: border-box;
 }
 

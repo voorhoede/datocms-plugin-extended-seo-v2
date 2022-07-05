@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Canvas, Button, FieldHint } from 'datocms-react-ui'
+import { Canvas, Button } from 'datocms-react-ui'
 import { RenderFieldExtensionCtx } from 'datocms-plugin-sdk'
 import get from 'lodash/get'
 import { FaPen } from 'react-icons/fa'
@@ -7,7 +7,11 @@ import { FaPen } from 'react-icons/fa'
 import TabList from '../../components/TabList/TabList'
 
 import { socials, defaultUrl } from '../../lib/constants'
-import { buildPreviewURL } from '../../lib/helpers'
+import {
+  buildPreviewURL,
+  getFieldByType,
+  getFieldData,
+} from '../../lib/helpers'
 import useDato from '../../lib/useDato'
 
 import styles from './FieldExtension.module.css'
@@ -18,34 +22,37 @@ type Props = {
 
 export default function FieldExtension({ ctx }: Props) {
   const { currentUserAccessToken, environment } = ctx
-  const locale: string = ctx.locale
   const fieldValue: any = get(ctx.formValues, ctx.fieldPath)
-  const imageId = fieldValue?.image || ''
   const { getImageUrl } = useDato(currentUserAccessToken || '', environment)
   const [socialImageUrl, setSocialImageUrl] = useState('')
 
-  const slugField = Object.values(ctx.fields).find((value) => {
-    return value?.attributes.field_type === 'slug'
-  })
+  const titleField = getFieldByType(ctx, 'string')
+  const titleFieldData = getFieldData(ctx, titleField)
+
+  const slugField = getFieldByType(ctx, 'slug')
+  const slugFieldData = getFieldData(ctx, slugField)
   const slugFieldPrefix =
     slugField?.attributes?.appearance?.parameters?.url_prefix
-  const slugFieldId = slugField?.attributes.api_key || ''
-  const slugFieldLocalized: boolean = slugField?.attributes.localized || false
 
-  const slugFieldPath: string = slugFieldLocalized
-    ? `${slugFieldId}.${locale}`
-    : slugFieldId
+  const imageField =
+    getFieldByType(ctx, 'file') || getFieldByType(ctx, 'gallery')
+  const imageFieldData = getFieldData(ctx, imageField)
 
-  const slugFieldData: any = get(ctx.formValues, slugFieldPath)
+  const imageId =
+    fieldValue?.image ||
+    imageFieldData?.upload_id ||
+    imageFieldData?.[0]?.upload_id ||
+    ''
 
   async function handleOpenModal() {
     return await ctx.openModal({
       id: 'seoSettings',
       title: 'Edit SEO settings',
-      width: 'l',
+      width: 's',
       parameters: {
         fieldValue,
-        imageUrl: socialImageUrl,
+        imageUrl: fieldValue?.image ? socialImageUrl : '',
+        validators: ctx.field.attributes.validators,
       },
     })
   }
@@ -54,7 +61,7 @@ export default function FieldExtension({ ctx }: Props) {
     handleOpenModal().then((response: any) => {
       if (response) {
         ctx.setFieldValue(ctx.fieldPath, response.fieldValue)
-        setSocialImageUrl(response.imageUrl)
+        // setSocialImageUrl(response.imageUrl)
       }
     })
   }
@@ -65,45 +72,45 @@ export default function FieldExtension({ ctx }: Props) {
   }
 
   async function fetchImage() {
-    if (!socialImageUrl) {
-      const imageUrl = await getImageUrl(imageId)
-      setSocialImageUrl(imageUrl)
-    }
+    const imageUrl = await getImageUrl(imageId)
+    setSocialImageUrl(imageUrl)
   }
 
   useEffect(() => {
     fetchImage()
     // eslint-disable-next-line
-  }, [])
+  }, [imageId])
+
+  const previewObject = {
+    title: fieldValue?.title || titleFieldData || '',
+    description: fieldValue?.description,
+    image: socialImageUrl,
+    card: fieldValue?.twitter_card,
+    url: `${slugFieldPrefix || defaultUrl}/${slugFieldData || ''}`,
+  }
 
   const SocialTabs = Object.entries(socials).map(([title, slug]) => (
     <div key={title}>
       <iframe
         className={styles.iframe}
         title={title}
-        src={buildPreviewURL(slug, {
-          title: fieldValue?.title,
-          description: fieldValue?.description,
-          image: socialImageUrl,
-          card: fieldValue?.twitter_card,
-          url: `${slugFieldPrefix || defaultUrl}/${slugFieldData || ''}`
-        })}
+        src={buildPreviewURL(slug, previewObject)}
       />
     </div>
   ))
 
   return (
     <Canvas ctx={ctx}>
-      {fieldValue ? (
+      {previewObject?.title ? (
         <TabList onConfigure={openConfigure} resetData={resetData}>
           {SocialTabs}
         </TabList>
       ) : (
         <div className={styles.fieldset}>
-          <FieldHint>No SEO setting configured</FieldHint>
+          <p className="body">No SEO setting configured</p>
           <Button
             className={styles.button}
-            buttonSize="xxs"
+            buttonSize="s"
             onClick={openConfigure}
             leftIcon={<FaPen />}
           >
