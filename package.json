@@ -51,7 +51,7 @@
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
-    "datocms-client": "^3.5.20"
+    "datocms-client": "^3.5.21"
   },
   "dependencies": {
     "@types/lodash": "^4.14.178",
