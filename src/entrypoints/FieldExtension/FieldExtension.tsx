@@ -73,6 +73,7 @@ export default function FieldExtension({ ctx }: Props) {
 
   async function fetchImage() {
     const imageUrl = await getImageUrl(imageId)
+    if (!imageUrl) return
     setSocialImageUrl(imageUrl)
   }
 
