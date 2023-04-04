@@ -1,10 +1,10 @@
-import { useState } from "react"
-import { FaTrash, FaPen } from "react-icons/fa"
-import { Button } from "datocms-react-ui"
+import { useState } from 'react'
+import { FaTrash, FaPen } from 'react-icons/fa'
+import { Button } from 'datocms-react-ui'
 
-import TabListItem from "../TabListItem/TabListItem"
+import TabListItem from '../TabListItem/TabListItem'
 
-import styles from "./TabList.module.css"
+import styles from './TabList.module.css'
 
 type Props = {
   children: JSX.Element[]
