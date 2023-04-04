@@ -5,10 +5,23 @@
   background-color: var(--light-bg-color);
 }
 
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+}
+
+@media (min-width: 750px) {
+  .navigation {
+    flex-direction: initial;
+  }
+}
+
 .list {
   display: flex;
   align-items: flex-end;
   background-color: var(--light-bg-color);
+  padding: 0 var(--spacing-s);
   line-height: 1;
 }
 
@@ -18,9 +31,15 @@
 }
 
 .configure {
-  margin-left: auto;
   align-self: center;
   line-height: initial;
+  padding: var(--spacing-s);
+}
+
+@media (min-width: 750px) {
+  .configure {
+    padding: 0;
+  }
 }
 
 .resetButton {

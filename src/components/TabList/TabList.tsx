@@ -1,10 +1,10 @@
-import { useState } from 'react'
-import { FaTrash, FaPen } from 'react-icons/fa'
-import { Button } from 'datocms-react-ui'
+import { useState } from "react"
+import { FaTrash, FaPen } from "react-icons/fa"
+import { Button } from "datocms-react-ui"
 
-import TabListItem from '../TabListItem/TabListItem'
+import TabListItem from "../TabListItem/TabListItem"
 
-import styles from './TabList.module.css'
+import styles from "./TabList.module.css"
 
 type Props = {
   children: JSX.Element[]
@@ -22,18 +22,20 @@ export default function TabList({ children, onConfigure, resetData }: Props) {
 
   return (
     <section className={styles.tabs}>
-      <ul className={styles.list} role="tablist">
-        {children.map((child) => {
-          const { key } = child
-          return (
-            <TabListItem
-              activeTab={activeTab}
-              key={key}
-              label={key as string}
-              onClick={onClickTabItem}
-            />
-          )
-        })}
+      <div className={styles.navigation}>
+        <ul className={styles.list} role="tablist">
+          {children.map((child) => {
+            const { key } = child
+            return (
+              <TabListItem
+                activeTab={activeTab}
+                key={key}
+                label={key as string}
+                onClick={onClickTabItem}
+              />
+            )
+          })}
+        </ul>
         <div className={styles.configure}>
           <Button buttonSize="xxs" onClick={onConfigure} leftIcon={<FaPen />}>
             Edit
@@ -49,7 +51,7 @@ export default function TabList({ children, onConfigure, resetData }: Props) {
             Reset
           </Button>
         </div>
-      </ul>
+      </div>
       <section className={styles.content}>
         {children.map((child) => {
           if (child.key !== activeTab) return undefined

@@ -8,7 +8,7 @@ type Props = {
 
 export default function TabListItem({ activeTab, label, onClick }: Props) {
   return (
-    <li role="tab">
+    <li role="tab" className={styles.listItem}>
       <button
         className={`${styles.button} ${
           activeTab === label && styles.buttonActive
