@@ -98,7 +98,3 @@ DatoCMS is a cloudbased headless CMS. See [datocms.md](https://github.com/voorho
 ## Contributing
 
 See [contributing.md](https://github.com/voorhoede/datocms-plugin-extended-seo-v2/blob/main/contributing.md).
-
-## License
-
-*MIT Licensed* by [De Voorhoede](https://www.voorhoede.nl).
