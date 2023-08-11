@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Canvas, Button } from 'datocms-react-ui'
 import { RenderFieldExtensionCtx } from 'datocms-plugin-sdk'
 import get from 'lodash/get'
-import { FaPen } from 'react-icons/fa'
+import { FaPenToSquare } from 'react-icons/fa6'
 
 import TabList from '../../components/TabList/TabList'
 
@@ -113,7 +113,7 @@ export default function FieldExtension({ ctx }: Props) {
             className={styles.button}
             buttonSize="s"
             onClick={openConfigure}
-            leftIcon={<FaPen />}
+            leftIcon={<FaPenToSquare />}
           >
             Configure
           </Button>

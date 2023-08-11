@@ -1,6 +1,7 @@
 import { TwitterCard, TwitterCardType, Socials } from './types'
 
 export const socials = {
+  GOOGLE: Socials.google,
   FACEBOOK: Socials.facebook,
   LINKEDIN: Socials.linkedin,
   TWITTER: Socials.twitter,
