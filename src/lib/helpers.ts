@@ -33,12 +33,17 @@ export function buildPreviewURL(social: Socials, options = {}) {
 }
 
 // Get field from ctx with field_type
-export function getFieldByType(ctx: RenderFieldExtensionCtx, field_type: string) {
-  const field = Object.values(ctx.fields).filter(value => {
-    return value?.relationships?.item_type?.data?.id === ctx.itemType.id
-  }).find((value) => {
-    return value?.attributes.field_type === field_type
-  })
+export function getFieldByType(
+  ctx: RenderFieldExtensionCtx,
+  field_type: string,
+) {
+  const field = Object.values(ctx.fields)
+    .filter((value) => {
+      return value?.relationships?.item_type?.data?.id === ctx.itemType.id
+    })
+    .find((value) => {
+      return value?.attributes.field_type === field_type
+    })
   return field
 }
 
@@ -48,9 +53,7 @@ export function getFieldData(ctx: RenderFieldExtensionCtx, field: any) {
   const fieldId = field?.attributes.api_key || ''
   const fieldLocalized: boolean = field?.attributes.localized || false
 
-  const fieldPath: string = fieldLocalized
-    ? `${fieldId}.${locale}`
-    : fieldId
+  const fieldPath: string = fieldLocalized ? `${fieldId}.${locale}` : fieldId
 
   const slugFieldData: any = get(ctx.formValues, fieldPath)
 

@@ -61,7 +61,7 @@ export default function FieldExtension({ ctx }: Props) {
     handleOpenModal().then((response: any) => {
       if (response) {
         ctx.setFieldValue(ctx.fieldPath, response.fieldValue)
-        // setSocialImageUrl(response.imageUrl)
+        setSocialImageUrl(response.imageUrl)
       }
     })
   }

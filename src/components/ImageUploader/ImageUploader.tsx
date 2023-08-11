@@ -38,7 +38,12 @@ export default function ImageUploader({
                 {uploadedButttonLabel}
               </button>
             </div>
-            <img className={styles.uploadedImage} src={imageUrl} alt="" onLoad={imageLoaded}/>
+            <img
+              className={styles.uploadedImage}
+              src={imageUrl}
+              alt=""
+              onLoad={imageLoaded}
+            />
           </>
         ) : (
           <>

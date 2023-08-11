@@ -23,22 +23,22 @@ export default function SeoSettings({ ctx }: Props) {
   const validators: any = ctx.parameters.validators
 
   const [titleInput, setTitleInput] = useState<string>(
-    fieldValuesParameters?.title || ''
+    fieldValuesParameters?.title || '',
   )
   const [descriptionInput, setDescriptionInput] = useState<string>(
-    fieldValuesParameters?.description || ''
+    fieldValuesParameters?.description || '',
   )
   const [cardTypeInput, setCardTypeInput] = useState<TwitterCardType | null>(
     twitterCardOptions.find(
-      (option) => option.value === fieldValuesParameters?.twitter_card
-    ) || null
+      (option) => option.value === fieldValuesParameters?.twitter_card,
+    ) || null,
   )
 
   const [imageId, setImageId] = useState<string | undefined>(
-    fieldValuesParameters?.image
+    fieldValuesParameters?.image,
   )
   const [imageUrl, setImageUrl] = useState<string | undefined>(
-    ctx.parameters?.imageUrl as string
+    ctx.parameters?.imageUrl as string,
   )
 
   const titleFieldHint: string | null = useMemo(() => {

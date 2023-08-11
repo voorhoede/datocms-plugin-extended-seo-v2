@@ -20,4 +20,10 @@ export const twitterCardOptions: TwitterCardType[] = [
 export const headsUpUrl = 'https://headsup.voorhoede.nl'
 export const defaultUrl = 'https://example.com'
 
-export const allowedImageExtension = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif', 'image/bmp']
+export const allowedImageExtension = [
+  'image/jpeg',
+  'image/jpg',
+  'image/png',
+  'image/gif',
+  'image/bmp',
+]
