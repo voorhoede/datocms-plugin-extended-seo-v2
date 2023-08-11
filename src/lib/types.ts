@@ -12,8 +12,12 @@ export enum TwitterCard {
   summaryLargeImageLabel = 'Summary with large image',
 }
 
-export type TwitterCardValue = TwitterCard.summary | TwitterCard.summaryLargeImage
-export type TwitterCardLabel = TwitterCard.summaryLabel | TwitterCard.summaryLargeImageLabel
+export type TwitterCardValue =
+  | TwitterCard.summary
+  | TwitterCard.summaryLargeImage
+export type TwitterCardLabel =
+  | TwitterCard.summaryLabel
+  | TwitterCard.summaryLargeImageLabel
 
 export type TwitterCardType = {
   label: TwitterCard.summaryLabel | TwitterCard.summaryLargeImageLabel
@@ -27,4 +31,5 @@ export enum Socials {
   whatsapp = 'whatsapp',
   slack = 'slack',
   openSearch = 'open-search',
+  google = 'google-default',
 }

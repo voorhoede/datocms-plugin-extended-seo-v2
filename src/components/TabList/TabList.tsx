@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { FaTrash, FaPen } from 'react-icons/fa'
+import { FaTrash, FaPenToSquare } from 'react-icons/fa6'
 import { Button } from 'datocms-react-ui'
 
 import TabListItem from '../TabListItem/TabListItem'
@@ -37,7 +37,11 @@ export default function TabList({ children, onConfigure, resetData }: Props) {
           })}
         </ul>
         <div className={styles.configure}>
-          <Button buttonSize="xxs" onClick={onConfigure} leftIcon={<FaPen />}>
+          <Button
+            buttonSize="xxs"
+            onClick={onConfigure}
+            leftIcon={<FaPenToSquare />}
+          >
             Edit
           </Button>
 
