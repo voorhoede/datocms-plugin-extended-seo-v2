@@ -54,5 +54,5 @@
 }
 
 .resetButton svg {
-  fill: #fff;
+  --accent-color: #fff;
 }
