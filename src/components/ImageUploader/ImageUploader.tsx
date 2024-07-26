@@ -2,7 +2,7 @@ import { Button, FormLabel } from 'datocms-react-ui'
 import { FaFolderOpen } from 'react-icons/fa'
 import 'datocms-react-ui/styles.css'
 
-import styles from './ImageUploader.module.css'
+import * as styles from './ImageUploader.module.css'
 
 type Props = {
   label: string

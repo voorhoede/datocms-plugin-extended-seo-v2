@@ -14,7 +14,7 @@ import {
 } from '../../lib/helpers'
 import useDato from '../../lib/useDato'
 
-import styles from './FieldExtension.module.css'
+import * as styles from './FieldExtension.module.css'
 
 type Props = {
   ctx: RenderFieldExtensionCtx
