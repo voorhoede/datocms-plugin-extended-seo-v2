@@ -4,7 +4,7 @@ import { Button } from 'datocms-react-ui'
 
 import TabListItem from '../TabListItem/TabListItem'
 
-import styles from './TabList.module.css'
+import * as styles from './TabList.module.css'
 
 type Props = {
   children: JSX.Element[]

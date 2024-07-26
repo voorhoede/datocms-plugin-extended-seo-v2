@@ -1,4 +1,4 @@
-import styles from './TabListItem.module.css'
+import * as styles from './TabListItem.module.css'
 
 type Props = {
   label: string

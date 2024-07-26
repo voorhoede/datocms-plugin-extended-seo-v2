@@ -6,7 +6,6 @@ import FieldExtension from './entrypoints/FieldExtension/FieldExtension'
 
 import { render } from './utils/render'
 
-import 'datocms-react-ui/styles.css'
 import './styles/index.css'
 
 connect({
